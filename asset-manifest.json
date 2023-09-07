@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Portfolio-First/static/css/main.b923272b.css",
+    "main.js": "/Portfolio-First/static/js/main.d779a91b.js",
+    "static/js/787.64d0d708.chunk.js": "/Portfolio-First/static/js/787.64d0d708.chunk.js",
+    "static/media/bisnis-mungki.png": "/Portfolio-First/static/media/bisnis-mungki.96a72a677221378c5800.png",
+    "static/media/portfolio-1.png": "/Portfolio-First/static/media/portfolio-1.48af1300c8585c3afe56.png",
+    "index.html": "/Portfolio-First/index.html",
+    "main.b923272b.css.map": "/Portfolio-First/static/css/main.b923272b.css.map",
+    "main.d779a91b.js.map": "/Portfolio-First/static/js/main.d779a91b.js.map",
+    "787.64d0d708.chunk.js.map": "/Portfolio-First/static/js/787.64d0d708.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b923272b.css",
+    "static/js/main.d779a91b.js"
+  ]
+}
