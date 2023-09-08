@@ -203,9 +203,10 @@ body {
     height: 100vh;
     padding: 0 10rem;
     position: relative;
+    margin-top: 10rem;
 }
 
-#projects .title {
+.title {
     display: inline-block;
     margin-top: 3rem;
     font-size: 3rem;
@@ -214,9 +215,10 @@ body {
     position: relative;
     overflow: hidden;
     padding: .1rem 1rem;
+    font-family: 'Kaushan Script', cursive;
 }
 
-#projects .title::before {
+.title::before {
     position: absolute;
     content: "";
     width: 6rem;
@@ -230,6 +232,7 @@ body {
 
 #projects .project {
     position: absolute;
+
 }
 
 #projects .project img {
@@ -256,9 +259,106 @@ body {
     font-size: 2.5rem;
 }
 
+#projects .wall {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+#projects .wall .wallshow {
+    background-color: #FFEAC5;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#projects .project-preview {
+    width: 100%;
+    height: 100%;
+    background-color: #FFEAC5;
+    padding: 1rem 5rem;
+}
+
+#projects .project-preview button{
+    background: none;
+    border: none;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2rem;
+}
+
+/* #projects .project {
+    position: relative;
+}
+
+#projects .project > div {
+    position: absolute;
+}
+
+#projects .project .image-preview {
+    width: 50vw;
+    right: 0;
+    top: 4rem;
+}
+
+#projects .project .description {
+    width: 0rem;
+    height: 20rem;
+    background: red;
+}
+ */
+#about {
+    margin-top: 5rem;
+    padding: 0 10rem;
+}
+
+#about > p {
+    font-size: 2rem;
+    text-indent: 5rem;
+    margin: 3rem 0;
+}
+
+#about h2 {
+    font-size: 3rem;
+    font-family: 'Kaushan Script', cursive;
+}
+
+#about .knowledges .items{
+    display: flex;
+    font-size: 8rem;
+    flex-wrap: wrap;
+    column-gap: 10rem;
+    justify-content: center;
+/*     background: rgba(255,255,255,0.7); */
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin-top: 5rem;
+}
+
+
+#about .knowledges .items > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .knowledges .items > div .percent {
+    font-size: 2rem;
+}
+
+#contact {
+    margin-top: 5rem;
+    padding: 0 10rem;
+}
 
 .mouse_indicator {
     cursor: none;
+    pointer-events: none;
 }
 
 .mouse_indicator > div {
