@@ -1,4 +1,4 @@
-
+import LongStickImage from "../../../images/bisnis-mungki.png";
 
 
 const ProjectPreview = () => {
@@ -14,15 +14,15 @@ const ProjectPreview = () => {
                     </svg>
                         Go Back! 
                     </button>
-                    {/* <div className="project">
+                    <div className="project">
                         <div className="description">
-
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repudiandae vitae iste facilis libero ratione suscipit! Natus ea odio ullam tempore laborum facere ex veniam ducimus provident, a unde id tempora reiciendis quod! Adipisci, consequatur?
                         </div>
                         <div className="image-preview">
-
+                            <img src={LongStickImage} width="100%" />
                         </div>
-                        <div className="name">Project Name</div>
-                    </div> */}
+                        <div className="name">Long Stick</div>
+                    </div>
                 </div>
             </div>
         </>

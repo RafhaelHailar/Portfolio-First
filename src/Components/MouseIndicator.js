@@ -13,7 +13,7 @@ const MouseIndicator = () => {
     useEffect(
         function() {
             const wall = document.querySelector("#projects .wall .wallshow");
-
+            const projects_container = document.querySelector("#projects .projects-container");
             const projects = document.querySelectorAll("#projects .project");   
 
 
@@ -52,7 +52,7 @@ const MouseIndicator = () => {
                 for (let i = 0;i < targets.length;i++) {
                     let [target,action,unTarget] = targets[i];
                     const target_box = target.getBoundingClientRect();
-                    if (x > target_box.x && x < target_box.x + target_box.width && y > target_box.y && y < target_box.y + target_box.height && !wall.classList.contains("grow")) {
+                    if (x > target_box.x && x < target_box.x + target_box.width && y > target_box.y && y < target_box.y + target_box.height && projects_container.style.zIndex != -1) {
                         action && action(mouse_indicator_box.left,mouse_indicator_box.top,mouse_follower);
                         text += `scale(1.5)`;
                     } else unTarget && unTarget();
@@ -64,8 +64,7 @@ const MouseIndicator = () => {
             window.onclick = function(event) {
                 for (let i = 0;i < projects.length;i++) {
                     if (event.target == projects[i]) {
-                        const projects_container = document.querySelector("#projects .projects-container");
-                       const target_box = event.target.getBoundingClientRect();
+                        const target_box = event.target.getBoundingClientRect();
                         wall.style.left = target_box.x + "px";
                         wall.style.top = target_box.y + "px";
                         wall.parentElement.style.zIndex = 0;  

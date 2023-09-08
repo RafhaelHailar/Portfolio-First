@@ -16,6 +16,10 @@ function App() {
       <PageProjects></PageProjects>
       <PageAbout></PageAbout>
       <PageContact></PageContact>
+      <div id='footer'>
+
+        
+      </div>
       <MouseIndicator></MouseIndicator>
     </>
   );

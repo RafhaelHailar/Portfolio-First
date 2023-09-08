@@ -204,30 +204,50 @@ body {
     padding: 0 10rem;
     position: relative;
     margin-top: 10rem;
+    margin-bottom: 5rem;
 }
 
 .title {
     display: inline-block;
     margin-top: 3rem;
-    font-size: 3rem;
-    letter-spacing: .5rem;
-    border: 2px solid  #F0C5BC;
+    font-size: 7rem;
+/*     letter-spacing: .5rem; */
     position: relative;
     overflow: hidden;
     padding: .1rem 1rem;
     font-family: 'Kaushan Script', cursive;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #F0C5BC;
 }
 
-.title::before {
+.title .name {
+    position: relative;
+}
+
+.title .name svg {
     position: absolute;
-    content: "";
-    width: 6rem;
-    height: 10rem;
-    background: #F0C5BC;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    transform: translateY(-20%) rotate(40deg);
+    bottom: -10%;
+    left: -10%;
+}
+
+.title span{
+    display: inline-block;
+    height: 2px;
+    background-color: #665132;
+}
+
+.title span:nth-child(1) {
+    flex: 0.09;
+}
+
+.title span:nth-child(3) {
+    flex: 1;
 }
 
 #projects .project {
@@ -249,6 +269,7 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
+    padding-top: 5rem;
 }
 
 #projects .medium {
@@ -292,29 +313,49 @@ body {
     font-size: 2rem;
 }
 
-/* #projects .project {
+#projects .project-preview .gotoProjectsBtn svg {
+    margin-right: 1rem;
+}
+
+#projects .project-preview .project {
     position: relative;
 }
 
-#projects .project > div {
+#projects .project-preview .project > div {
     position: absolute;
 }
 
-#projects .project .image-preview {
+#projects .project-preview .project .image-preview {
     width: 50vw;
     right: 0;
     top: 4rem;
 }
 
-#projects .project .description {
-    width: 0rem;
-    height: 20rem;
-    background: red;
+#projects .project-preview .project .image-preview img{
+    width: 100%;
 }
- */
+
+
+#projects .project-preview .project .description {
+    width: 40rem;
+    height: 20rem;
+    border: 0.15rem solid #665132;
+    top: 16rem;
+    padding: 2rem;
+}
+
+#projects .project-preview .project .name {
+    top: 31rem;
+    right: 35%;
+    transform: translateX(50%);
+    font-family: 'Kaushan Script', cursive;
+    font-size: 5rem;
+}
+
 #about {
     margin-top: 5rem;
     padding: 0 10rem;
+    position: relative;
 }
 
 #about > p {
@@ -352,8 +393,20 @@ body {
 }
 
 #contact {
-    margin-top: 5rem;
-    padding: 0 10rem;
+/*     margin-top: 10rem; */
+    padding: 10rem 10rem;
+    position: relative;
+}
+
+
+#contact form {
+    margin-top: 10rem;
+    width: 50%;
+}
+
+#contact form input , #contact form textarea {
+    width: 100%;
+    margin: .5rem 0;
 }
 
 .mouse_indicator {
@@ -384,4 +437,9 @@ body {
 
 .hide {
     display: none !important;
+}
+
+#footer {
+    height: 2rem;
+    background-color: #665132;
 }
