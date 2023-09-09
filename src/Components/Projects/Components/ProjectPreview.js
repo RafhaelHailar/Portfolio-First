@@ -19,7 +19,7 @@ const ProjectPreview = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repudiandae vitae iste facilis libero ratione suscipit! Natus ea odio ullam tempore laborum facere ex veniam ducimus provident, a unde id tempora reiciendis quod! Adipisci, consequatur?
                         </div>
                         <div className="image-preview">
-                            <img src={LongStickImage} width="100%" />
+                            <img src={LongStickImage}/>
                         </div>
                         <div className="name">Long Stick</div>
                     </div>

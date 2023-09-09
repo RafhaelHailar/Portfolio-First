@@ -21,16 +21,15 @@ const PageAbout = () => {
                 <div className="knowledges">
                     <div style={{flexBasis:"100%"}}>
                         <h2>I know...</h2>
-                        <p style={{fontSize : "1rem",fontWeight : "bold",textAlign : "right"}}>From 0% Ignorant - 100% Mastery</p>
                     </div>
                     <div className="items">
-                        <div><FontAwesomeIcon icon={faHtml5} style={{color  : "#e34c26"}} /> <span className="percent">9.9%</span></div>
-                        <div><FontAwesomeIcon icon={faCss3Alt} style={{color : "#264de4"}} /> <span className="percent">9.9%</span></div>
-                        <div><FontAwesomeIcon icon={faBootstrap} style={{color : "#563d7c"}}/> <span className="percent">50%</span></div>
-                        <div><FontAwesomeIcon icon={faJs} style={{color : "#F0DB4F"}} /> <span className="percent">9.9%</span></div>
-                        <div><FontAwesomeIcon icon={faGitAlt} style={{color : "#F1502F"}}/> <span className="percent">40%</span></div>
-                        <div><FontAwesomeIcon icon={faNode} style={{color : "#3c873a"}} /> <span className="percent">40%</span></div>
-                        <div><FontAwesomeIcon icon={faReact} style={{color : "#61DBFB"}}/> <span className="percent">20%</span></div>
+                        <div><FontAwesomeIcon icon={faHtml5} style={{color  : "#e34c26"}} /> <span className="percent"></span></div>
+                        <div><FontAwesomeIcon icon={faCss3Alt} style={{color : "#264de4"}} /> <span className="percent"></span></div>
+                        <div><FontAwesomeIcon icon={faBootstrap} style={{color : "#563d7c"}}/> <span className="percent"></span></div>
+                        <div><FontAwesomeIcon icon={faJs} style={{color : "#F0DB4F"}} /> <span className="percent"></span></div>
+                        <div><FontAwesomeIcon icon={faGitAlt} style={{color : "#F1502F"}}/> <span className="percent"></span></div>
+                        <div><FontAwesomeIcon icon={faNode} style={{color : "#3c873a"}} /> <span className="percent"></span></div>
+                        <div><FontAwesomeIcon icon={faReact} style={{color : "#61DBFB"}}/> <span className="percent"></span></div>
                     </div>         
                 </div>
             </div>
