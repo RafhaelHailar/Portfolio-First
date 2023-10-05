@@ -31,7 +31,7 @@ const Content = () => {
             <Container style={{marginTop : "5rem",padding : "0 5rem"}}>
                 <Row>
                     <Col style={{paddingTop:"5rem",position : "relative"}}>
-                        <h3 style={{fontSize:"2.1rem",fontWeight:"bold"}}>Hi , my name is <span style={{background : "#F0C5BC   ",color : "#665132", padding : "0.5rem 1rem"}}>Rafhael D. Hailar</span></h3>
+                        <h3 style={{fontSize:"2.1rem",fontWeight:"bold",position:"relative"}}>Hi , my name is <span style={{background : "#F0C5BC   ",color : "#665132", padding : "0.5rem 1rem",position:"absolute",transform:"translate(5%,-15%)"}}>Rafhael D. Hailar</span></h3>
                         <h3 style={{fontSize:"1.8rem",fontWeight:"",marginTop: "1.4rem"}}>I like developing and destroying things, it makes me happy to destroy what I've made.  </h3>
                         <h3 style={{fontSize:"1.8rem",fontWeight:"",marginTop:"0rem"}}>I develop and design <span className="type"><span className="cover"></span><span className="target">{types[count]}</span></span></h3>
                         <div className="download-resume">

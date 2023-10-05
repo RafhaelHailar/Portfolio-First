@@ -8,8 +8,8 @@ body {
     overflow-x: hidden;
 }
 
-* , a , button {
-    cursor: none;
+* , a , button , input[type="button"] {
+    cursor: none !important;
 }
 
 #animatedBackground {
@@ -296,7 +296,7 @@ body {
     height: 1rem;
     position: absolute;
     border-radius: 50%;
-    transition: 1s;
+    transition: transform 1s;
 }
 
 #projects .project-preview {
@@ -317,35 +317,66 @@ body {
     margin-right: 1rem;
 }
 
-#projects .project-preview .project {
+#projects .project-preview .project-target {
+    transition: opacity 1s;
+    opacity: 0;
     position: relative;
 }
 
-#projects .project-preview .project > div {
+#projects .project-preview .project-target > div {
     position: absolute;
 }
 
-#projects .project-preview .project .image-preview {
+#projects .project-preview .project-target .image-preview {
     /* width: 50vw;
     right: 0;
     top: 4rem; */
+    width: 60vw;
+    height: 70vh;
+    right: 0;
+/*     z-index: -1; */
+    border: 0.15rem solid #665132;
 }
 
-#projects .project-preview .project .image-preview img{
-   /*  width: 100%; */
+#projects .project-preview .project-target .image-preview img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
-#projects .project-preview .project .description {
+#projects .project-preview .project-target .description {
     width: 40rem;
     height: 20rem;
     border: 0.15rem solid #665132;
     top: 16rem;
     padding: 2rem;
+    background-color: #FFEAC5;
+    z-index: 1;
 }
 
-#projects .project-preview .project .name {
-    top: 31rem;
+#projects .project-preview .project-target .description .actions {
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+}
+
+#projects .project-preview .project-target .description .actions a {
+    background: #665132;
+    border: 0.15rem solid #322818;
+    border-radius: 10px;
+    color: #FFEAC5;
+    margin-right: .5rem;
+    text-decoration: none;
+    padding: .6rem .8rem;
+    font-size: 1.7rem;
+    font-family: 'Kaushan Script', cursive;
+}
+
+#projects .project-preview .project-target .name {
+    top: 33rem;
     right: 35%;
     transform: translateX(50%);
     font-family: 'Kaushan Script', cursive;

@@ -16,7 +16,7 @@ const MouseIndicator = () => {
             const projects_container = document.querySelector("#projects .projects-container");
             const projects = document.querySelectorAll("#projects .project");   
 
-
+/* 
             for (let i = 0;i < projects.length;i++) {
                 let target = projects[i];
 
@@ -35,8 +35,41 @@ const MouseIndicator = () => {
         
                 addTarget(target,action,unTarget);
             }
+ */
+            (function() {
+                let buttons = document.querySelectorAll("button");
+                let as = document.querySelectorAll("a");
+                let input_buttons = document.querySelectorAll("input[type='button']");
 
-            console.log(1)
+                let call_actions = [...buttons,...as,...input_buttons,...projects];
+                console.log(call_actions)
+                for (let i = 0;i < call_actions.length;i++) {
+                    let target = call_actions[i];
+
+                    let unTarget = () => {};
+                    let action = () => {};
+
+                    if (target.parentElement == projects_container) {
+                        const image = target.querySelector("img");
+                         action = function(x,y) {
+                            const image_box = target.getBoundingClientRect();
+                            image.style.top =  y - image_box.y + 20 + "px";
+                            image.style.left =  x - image_box.x - image_box.width / 2 + "px";
+                            image.classList.remove("hide");
+                            target.style.zIndex = 99;
+                        }
+                         unTarget = function() {
+                            image.classList.add("hide");
+                            target.style.zIndex = 1;
+                        }
+                    }
+
+                    if (target.parentElement == document.querySelector(".actions")) console.log("YAPIPI")
+            
+                    addTarget(target,action,unTarget);
+                }
+            })();
+
             const mouse_indicator = document.querySelector(".mouse_indicator .inner_circle");
             const mouse_follower = document.querySelector(".mouse_indicator .outer_circle");
             const mouse_follower_box = mouse_follower.getBoundingClientRect();
@@ -52,12 +85,13 @@ const MouseIndicator = () => {
                 for (let i = 0;i < targets.length;i++) {
                     let [target,action,unTarget] = targets[i];
                     const target_box = target.getBoundingClientRect();
-                    if (x > target_box.x && x < target_box.x + target_box.width && y > target_box.y && y < target_box.y + target_box.height && projects_container.style.zIndex != -1) {
+                    if (x > target_box.x && x < target_box.x + target_box.width && y > target_box.y && y < target_box.y + target_box.height && !(projects_container.style.zIndex == -1 && !target.classList.contains("prevProjLink"))) {
                         action && action(mouse_indicator_box.left,mouse_indicator_box.top,mouse_follower);
                         text += `scale(1.5)`;
+                        console.log("YAGO")
                     } else unTarget && unTarget();
                 }
-
+                
                 mouse_follower.style.transform = text;
             });
 
@@ -65,8 +99,8 @@ const MouseIndicator = () => {
                 for (let i = 0;i < projects.length;i++) {
                     if (event.target == projects[i]) {
                         const target_box = event.target.getBoundingClientRect();
-                        wall.style.left = target_box.x + "px";
-                        wall.style.top = target_box.y + "px";
+                        wall.style.left = target_box.x + (target_box.width / 2) + "px";
+                        wall.style.top = target_box.y + (target_box.height / 2) + "px";
                         wall.parentElement.style.zIndex = 0;  
                         projects_container.style.zIndex = -1;
                         document.body.style.overflow = "hidden";
@@ -76,13 +110,19 @@ const MouseIndicator = () => {
                         setTimeout(() => {
                             wall.classList.add("hide");
                             document.querySelector("#projects .project-preview").classList.remove("hide");
+                            document.querySelector("#projects .project-preview .project-target").style.transition = "opacity 1s";
+                            setTimeout(() => {
+                                document.querySelector("#projects .project-preview .project-target").style.opacity = 1;
+                            })
                         },1000);
                     }
                 }
             }
 
             document.querySelector(".gotoProjectsBtn").onclick = function() {
-                const projects_container = document.querySelector("#projects .projects-container"); 
+                const projects_container = document.querySelector("#projects .projects-container");
+                        document.querySelector("#projects .project-preview .project-target").style.transition = "none";
+                        document.querySelector("#projects .project-preview .project-target").style.opacity = 0;
                         document.querySelector("#projects .project-preview").classList.add("hide");
                         wall.classList.remove("hide");
                         setTimeout(() => {

@@ -8,7 +8,7 @@ const NavigationBar = () => {
               <Navbar.Brand href="#home" style={{fontFamily : " 'Kaushan Script', cursive",fontSize:"3rem",color : "#665132"}}>R.H</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ms-auto" style={{gap : "6rem"}}>
+                <Nav className="ms-auto page-actions" style={{gap : "6rem"}}>
                   <Nav.Link href="#projects">
                     PROJECTS              
                     <svg xmlns="http://www.w3.org/2000/svg" width="165" height="63" viewBox="0 0 165 63" fill="none">
