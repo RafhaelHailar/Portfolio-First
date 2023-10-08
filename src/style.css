@@ -318,7 +318,6 @@ body {
 }
 
 #projects .project-preview .project-target {
-    transition: opacity 1s;
     opacity: 0;
     position: relative;
 }
