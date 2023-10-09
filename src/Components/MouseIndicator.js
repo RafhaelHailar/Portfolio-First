@@ -101,7 +101,7 @@ const MouseIndicator = () => {
 
             document.querySelector(".gotoProjectsBtn").onclick = function() {
                 const projects_container = document.querySelector("#projects .projects-container");
-                        document.querySelector("#projects .project-preview .project-target").style.transition = "none";
+                        document.querySelector("#projects .project-preview .project-target").style.transition = "0 opacity";
                         document.querySelector("#projects .project-preview .project-target").style.opacity = 0;
                         document.querySelector("#projects .project-preview").classList.add("hide");
                         wall.classList.remove("hide");

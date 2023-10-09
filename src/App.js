@@ -7,7 +7,6 @@ import PageAbout from './Components/About/PageAbout';
 import PageContact from './Components/Contact/PageContact';
 import MouseIndicator from './Components/MouseIndicator';
 
-
 function App() {
   return (
     <>
@@ -21,6 +20,7 @@ function App() {
         
       </div>
       <MouseIndicator></MouseIndicator>
+
     </>
   );
 }

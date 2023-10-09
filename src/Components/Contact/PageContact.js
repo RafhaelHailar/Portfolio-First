@@ -1,4 +1,22 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 const PageContact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICEID, process.env.REACT_APP_EMAILJS_TEMPLATEID, form.current, process.env.REACT_APP_EMAILJS_PUBLICKEY)
+        .then((result) => {
+            console.log(result.text);
+            form.current.reset();
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+  
+
     return (
         <>
             <div id="contact">
@@ -12,13 +30,24 @@ const PageContact = () => {
                     </div>
                     <span></span>
                 </div>
-                <form>
-                    <h1>Let's get to know each other</h1>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <textarea placeholder="Message" rows={10}></textarea>
-                    <button>Send Your Message</button>
-                </form>
+                <div className="contact-form">
+                    <h1 style={{marginBottom:"2.5rem"}}>Let's get to know each other</h1>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <div className="input-group">
+                            <input type="text" required name="user_name" />
+                            <span>Name</span>
+                        </div>
+                        <div className="input-group">
+                            <input type="text" required name="user_email"/>
+                            <span>Email</span>
+                        </div>
+                        <div className="input-group">
+                            <textarea rows={1} required name="message"></textarea>
+                            <span>Message</span>
+                        </div>
+                        <button>Send Your Message</button>
+                    </form>
+                </div>
             </div>
         </>
     );

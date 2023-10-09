@@ -356,10 +356,16 @@ body {
     z-index: 1;
 }
 
-#projects .project-preview .project-target .description .actions {
+#projects .project-preview .project-target .description .others {
     position: absolute;
-    right: 1rem;
     bottom: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#projects .project-preview .project-target .description .actions {
+    display: flex;
+    align-items: flex-end;
 }
 
 #projects .project-preview .project-target .description .actions a {
@@ -372,6 +378,18 @@ body {
     padding: .6rem .8rem;
     font-size: 1.7rem;
     font-family: 'Kaushan Script', cursive;
+}
+
+#projects .project-preview .project-target .description .tools > div {
+    display: flex;
+    gap: .5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    overflow: scroll;
+}
+
+#projects .project-preview .project-target .description .tools > div::-webkit-scrollbar {
+    display: none;
 }
 
 #projects .project-preview .project-target .name {
@@ -430,14 +448,51 @@ body {
 }
 
 
-#contact form {
+#contact .contact-form {
     margin-top: 8rem;
-    width: 50%;
+    width: 60%;
+    background: #FFEAC5;
+    border: 2px solid #665132;
+    padding: 5rem 5rem;
+}
+
+#contact .contact-form .input-group  {
+    position: relative;
+    margin: 4rem 0;
+}
+
+#contact .contact-form .input-group input:focus ~ span, #contact .contact-form .input-group input:valid ~ span,
+#contact .contact-form .input-group textarea:focus ~ span , #contact .contact-form .input-group textarea:valid ~ span {
+    transform: translateY(-100%);
+}
+
+#contact .contact-form .input-group span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .2s;
+}
+
+#contact .contact-form button  {
+    background: #F0C5BC;
+    border: none;
+    font-size: 1.1rem;
+    padding: 1rem 1rem;
+}
+
+#contact .contact-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #665132;
+    outline: none;
 }
 
 #contact form input , #contact form textarea {
     width: 100%;
-    margin: .5rem 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #665132;
 }
 
 .mouse_indicator {

@@ -17,9 +17,23 @@ const ProjectPreview = () => {
                     <div className="project-target">
                         <div className="description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repudiandae vitae iste facilis libero ratione suscipit! Natus ea odio ullam tempore laborum facere ex veniam ducimus provident, a unde id tempora reiciendis quod! Adipisci, consequatur?
-                            <div className="actions">
-                                <a href="" className="prevProjLink">Code</a>
-                                <a href="https://rafhaelhailar.github.io/Long-Stick/" className="prevProjLink" target="_blank">Live Demo</a>
+                            <div className="others container-fluid">
+                                <div className="row">
+                                    <div className="tools col-6">
+                                        <h3 style={{fontWeight:"700"}}>TOOLS</h3>
+                                        <div>
+                                            <span>#HTML</span>
+                                            <span>#CSS</span>
+                                            <span>#Javascript</span>
+                                            <span>#LOVEUwU</span>
+                                        </div>
+                                    </div>
+                                    <div className="actions col-6">
+                                        <a href="" className="prevProjLink">Code</a>
+                                        <a href="https://rafhaelhailar.github.io/Long-Stick/" className="prevProjLink" target="_blank">Live Demo</a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div className="image-preview">
