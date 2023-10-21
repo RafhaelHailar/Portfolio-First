@@ -378,6 +378,13 @@ body {
     padding: .6rem .8rem;
     font-size: 1.7rem;
     font-family: 'Kaushan Script', cursive;
+    transition: .5s;
+}
+
+#projects .project-preview .project-target .description .actions a:hover {
+    background: #FFEAC5;
+    color: #665132;
+    border: 0.1rem solid #322818;
 }
 
 #projects .project-preview .project-target .description .tools > div {
